@@ -17,3 +17,5 @@ def test_dequeue(queue):
 
 def test_str(queue):
     assert str(queue) == "data1\ndata2\ndata3"
+    queue.enqueue(123)
+    assert str(queue) == "data1\ndata2\ndata3\n123"
