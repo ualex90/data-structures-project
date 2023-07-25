@@ -37,6 +37,6 @@ class Queue:
         list_ = list()
         node = self.head
         while node is not None:
-            list_.append(node.data)
+            list_.append(str(node.data))
             node = node.next_node
         return '\n'.join(list_)
