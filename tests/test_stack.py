@@ -25,3 +25,10 @@ def test_pop(stack):
     assert stack.top.data == 1
     assert stack.pop() == 1
     assert stack.top is None
+
+
+def test_str(stack):
+    assert stack.__str__() == 'Stack. Количество элементов - 3'
+    stack.push(4)
+    assert stack.__str__() == 'Stack. Количество элементов - 4'
+    stack.pop()
