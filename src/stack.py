@@ -35,3 +35,18 @@ class Stack:
         data = self.top.data
         self.top = self.top.next_node
         return data
+
+    def count(self):
+        """функция счета количества элементов стека"""
+
+        count = 0
+        try:
+            node = self.top.next_node
+            while True:
+                count += 1
+                node = node.next_node
+        except AttributeError:
+            return count
+
+    def __str__(self):
+        return f'Stack. Количество элементов - {self.count()}'
