@@ -1,1 +1,19 @@
 """Здесь надо написать тесты с использованием unittest для модуля queue."""
+import pytest
+
+
+def test_enqueue(queue):
+    assert queue.head.data == 'data1'
+    assert queue.head.next_node.data == 'data2'
+    assert queue.tail.data == 'data3'
+    assert queue.tail.next_node is None
+    with pytest.raises(AttributeError):
+        print(queue.tail.next_node.data)
+
+
+def test_dequeue(queue):
+    assert queue.dequeue() is None
+
+
+def test_str(queue):
+    assert str(queue) == "data1\ndata2\ndata3"
