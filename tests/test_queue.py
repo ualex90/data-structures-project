@@ -12,7 +12,14 @@ def test_enqueue(queue):
 
 
 def test_dequeue(queue):
-    assert queue.dequeue() is None
+    assert queue.dequeue() == 'data1'
+    assert queue.tail.data == 'data3'
+    assert queue.dequeue() == 'data2'
+    assert queue.tail.data == 'data3'
+    assert queue.dequeue() == 'data3'
+    assert queue.tail.data == 'data3'
+    with pytest.raises(AttributeError):
+        assert queue.dequeue()
 
 
 def test_str(queue):
