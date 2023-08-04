@@ -3,11 +3,15 @@ from src.linked_list import LinkedList
 if __name__ == '__main__':
     # Создаем пустой односвязный список
     ll = LinkedList()
+    print(ll)
 
     # Добавляем данные
     ll.insert_beginning({'id': 1})
+    print(ll)
     ll.insert_at_end({'id': 2})
+    print(ll)
     ll.insert_at_end({'id': 3})
+    print(ll)
     ll.insert_beginning({'id': 0})
 
     # Печатаем данные
