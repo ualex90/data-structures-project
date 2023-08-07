@@ -25,6 +25,17 @@ class LinkedList:
             self.tail = Node(data, None)
             self.head = self.tail
 
+    def to_list(self) -> list:
+        """Возвращает список с данными, содержащимися в односвязном списке"""
+        pass
+
+    def get_data_by_id(self, user_id: int) -> dict:
+        """
+        Возвращает первый найденный в LinkedList словарь с ключом
+        'id', значение которого равно переданному в метод значению
+        """
+        pass
+
     def __str__(self) -> str:
         """Вывод данных односвязного списка в строковом представлении"""
         node = self.head
