@@ -39,7 +39,13 @@ class LinkedList:
         Возвращает первый найденный в LinkedList словарь с ключом
         'id', значение которого равно переданному в метод значению
         """
-        pass
+
+        for data in self.to_list():
+            try:
+                if data['id'] == user_id:
+                    return data
+            except TypeError:
+                print('Данные не являются словарем или в словаре нет id')
 
     def __str__(self) -> str:
         """Вывод данных односвязного списка в строковом представлении"""

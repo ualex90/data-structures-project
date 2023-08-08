@@ -19,3 +19,13 @@ def test_to_list(ll_1, ll_3):
     # Test case #1
     assert ll_1.to_list() == [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}]
     assert ll_3.to_list() == []
+
+
+def test_get_data_by_id(ll_1, ll_3):
+    assert ll_1.get_data_by_id(2) == {'id': 2}
+    assert ll_1.get_data_by_id(3) == {'id': 3}
+    assert ll_1.get_data_by_id(4) is None
+    ll_1.insert_at_end('idusername')
+    ll_1.insert_at_end([1, 2, 3])
+    assert ll_1.get_data_by_id(4) is None
+    assert ll_3.get_data_by_id(1) is None
