@@ -27,7 +27,13 @@ class LinkedList:
 
     def to_list(self) -> list:
         """Возвращает список с данными, содержащимися в односвязном списке"""
-        pass
+        node = self.head
+        ll_list = list()
+        if node:
+            while node:
+                ll_list.append(node.data)
+                node = node.next_node
+        return ll_list
 
     def get_data_by_id(self, user_id: int) -> dict:
         """
