@@ -40,3 +40,9 @@ def ll_2():
     ll.insert_at_end({'id': 2})
     ll.insert_beginning({'id': 0})
     return ll
+
+
+@pytest.fixture
+def ll_3():
+    ll = LinkedList()
+    return ll

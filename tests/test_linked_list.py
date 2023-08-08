@@ -13,3 +13,9 @@ def test_linkedlist(ll_1, ll_2):
     # Test case #3
     ll_3 = LinkedList()
     assert str(ll_3) == "None"
+
+
+def test_to_list(ll_1, ll_3):
+    # Test case #1
+    assert ll_1.to_list() == [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}]
+    assert ll_3.to_list() == []
